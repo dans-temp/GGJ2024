@@ -1,0 +1,95 @@
+[gd_scene load_steps=10 format=3 uid="uid://blon18iodsd0c"]
+
+[ext_resource type="Script" path="res://Scripts/Dialog Box.gd" id="1_1532h"]
+[ext_resource type="Texture2D" uid="uid://dkxtsyo65tcbe" path="res://Assets/Portraits/mask.png" id="2_rtw4x"]
+[ext_resource type="Texture2D" uid="uid://jlxjwooba5ij" path="res://Assets/Sprites/dialog-arrow.png" id="3_cgnya"]
+[ext_resource type="AudioStream" uid="uid://8bstx6ydv325" path="res://Assets/Sounds/speech.mp3" id="4_omqva"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qu3xn"]
+atlas = ExtResource("3_cgnya")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfnga"]
+atlas = ExtResource("3_cgnya")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqcly"]
+atlas = ExtResource("3_cgnya")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nafnq"]
+atlas = ExtResource("3_cgnya")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmvk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qu3xn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfnga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqcly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nafnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Dialog Manager" type="CanvasLayer"]
+process_mode = 2
+
+[node name="Dialog Box" type="ColorRect" parent="."]
+z_index = 100
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -358.0
+offset_top = -229.0
+offset_right = 358.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_1532h")
+
+[node name="Name" type="RichTextLabel" parent="Dialog Box"]
+layout_mode = 0
+offset_right = 715.0
+offset_bottom = 47.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Name Goes Here"
+
+[node name="Text" type="RichTextLabel" parent="Dialog Box"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 45.0
+offset_right = 716.0
+offset_bottom = 179.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Words Go Here"
+
+[node name="Portrait" type="Sprite2D" parent="Dialog Box"]
+position = Vector2(36, -53)
+scale = Vector2(3.05264, 2.96875)
+texture = ExtResource("2_rtw4x")
+
+[node name="Indicator" type="AnimatedSprite2D" parent="Dialog Box"]
+visible = false
+position = Vector2(707, 172)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_gmvk5")
+autoplay = "default"
+
+[node name="Timer" type="Timer" parent="Dialog Box"]
+
+[node name="Speech" type="AudioStreamPlayer2D" parent="Dialog Box"]
+stream = ExtResource("4_omqva")

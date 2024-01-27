@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://1raaa5183fu2"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_1e4vt"]
+[ext_resource type="Texture2D" uid="uid://5kbr8747ewqe" path="res://Assets/Backgrounds/Blue.png" id="2_x40o5"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_1e4vt")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x40o5")
+stretch_mode = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = 76.0
+offset_right = 110.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Play Game"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.5
+offset_top = -152.5
+offset_right = 210.5
+offset_bottom = -49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.92549, 0.654902, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "Jump Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
