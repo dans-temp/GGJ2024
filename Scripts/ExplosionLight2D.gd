@@ -6,7 +6,6 @@ var initial_energy: float = 1.0
 func _ready():
 	# Store the initial energy value
 	initial_energy = energy
-	print('11')
 	# Start the timer
 	$Timer.start(0.1)
 
