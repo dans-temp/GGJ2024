@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://do01pwcse5tuf"]
+
+[ext_resource type="Script" path="res://Scripts/bullet.gd" id="1_o28ce"]
+[ext_resource type="Texture2D" uid="uid://onkol070bnu8" path="res://Assets/Sprites/Dust.png" id="2_26fje"]
+[ext_resource type="Texture2D" uid="uid://dlcdayvx4r7e5" path="res://Assets/Sprites/missle.png" id="2_v2rqf"]
+
+[sub_resource type="Gradient" id="Gradient_31qyc"]
+offsets = PackedFloat32Array(0, 0.574803, 1)
+colors = PackedColorArray(0.46, 0.46, 0.46, 1, 0.552941, 0.552941, 0.552941, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fjjsf"]
+gradient = SubResource("Gradient_31qyc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_svlgl"]
+lifetime_randomness = 1.0
+direction = Vector3(-1, 0, 0)
+spread = 35.281
+initial_velocity_min = 76.92
+initial_velocity_max = 142.85
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_fjjsf")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tijot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4y2sa"]
+atlas = ExtResource("2_v2rqf")
+region = Rect2(0, 0, 6, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0nexw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4y2sa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bullet" type="CharacterBody2D"]
+z_index = 200
+script = ExtResource("1_o28ce")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-13, 0)
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_svlgl")
+texture = ExtResource("2_26fje")
+lifetime = 0.2
+randomness = 0.2
+trail_lifetime = 0.21
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_tijot")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-14, 0)
+rotation = 1.5708
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_0nexw")
+autoplay = "default"

@@ -17,12 +17,19 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 GlobalTheme="*res://Scenes/theme.tscn"
+GlobalVars="*res://Scripts/global_vars.gd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
+mouse_cursor/custom_image="res://Assets/Sprites/crosshair.png"
 mouse_cursor/custom_image_hotspot=Vector2(42, 26)
+
+[gui]
+
+theme/custom_font="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf"
 
 [input]
 

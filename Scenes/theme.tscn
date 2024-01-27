@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://e3wawy535pvx"]
 
-[ext_resource type="AudioStream" uid="uid://b1xowe72jx08k" path="res://Assets/Sounds/theme.mp3" id="1_t4o0m"]
+[ext_resource type="AudioStream" uid="uid://ddl7r13ivydy0" path="res://Assets/Sounds/theme.mp3" id="1_0835c"]
 
 [node name="Theme" type="Node"]
 process_mode = 3
 
 [node name="theme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_t4o0m")
+stream = ExtResource("1_0835c")
 volume_db = -14.378
 autoplay = true

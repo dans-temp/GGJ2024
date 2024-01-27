@@ -1,0 +1,12 @@
+{ 
+	"1-1":
+		[
+				{"Name":"[center]scott", "image":"mask", "Text": "[pulse]WOW this game looks super cool"},
+				{"Name":"[center]dan", "image":"mask", "Text": "[wave]I guess its not too shabby"},
+		],
+	"1-2":
+		[
+				{"Name":"[center]me", "image":"mask", "Text": "[rainbow freq=1.0 sat=0.8 val=0.8]RAINBOW TEST "},
+				{"Name":"[center]me", "image":"mask", "Text": "yay this is a really long bit of text yay this is a really long bit of text yay this is a really [shake radius=20]long bit of text"},
+		]
+}
