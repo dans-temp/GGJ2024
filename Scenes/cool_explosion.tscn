@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://b4yw0aglv2peu"]
+[gd_scene load_steps=22 format=3 uid="uid://b4yw0aglv2peu"]
 
 [ext_resource type="Script" path="res://Scripts/cool_explosion.gd" id="1_78hyh"]
 [ext_resource type="Texture2D" uid="uid://onkol070bnu8" path="res://Assets/Sprites/Dust.png" id="2_kl1un"]
 [ext_resource type="Texture2D" uid="uid://b0ounipsc1xh4" path="res://Assets/Sprites/Sparks.png" id="3_gux3l"]
 [ext_resource type="AudioStream" uid="uid://mmfyqn5hn043" path="res://Assets/Sounds/explosion_sound.mp3" id="4_wc1xe"]
+[ext_resource type="Script" path="res://Scripts/ExplosionLight2D.gd" id="5_0ivky"]
 
 [sub_resource type="Gradient" id="Gradient_c4563"]
 offsets = PackedFloat32Array(0.0893372, 0.118156, 0.29683, 0.426513, 0.824207, 0.979827)
@@ -102,6 +103,17 @@ animations = [{
 "speed": 80.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_gl2dj"]
+offsets = PackedFloat32Array(0, 0.7)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y3ff6"]
+gradient = SubResource("Gradient_gl2dj")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="CoolExplosion" type="Node2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_78hyh")
@@ -127,3 +139,12 @@ animation = &"Sparks"
 stream = ExtResource("4_wc1xe")
 volume_db = -0.13
 pitch_scale = 1.5
+
+[node name="ExplosionLight2D" type="PointLight2D" parent="."]
+color = Color(0.952941, 0.984314, 0.796078, 1)
+texture = SubResource("GradientTexture2D_y3ff6")
+script = ExtResource("5_0ivky")
+
+[node name="Timer" type="Timer" parent="ExplosionLight2D"]
+
+[connection signal="timeout" from="ExplosionLight2D/Timer" to="ExplosionLight2D" method="_on_timer_timeout"]

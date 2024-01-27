@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var camera_2d_path = "../../SceneObjects/CharacterBody2D/Camera2D"
+@onready var point_light_2d = $PointLight2D
 
 func _ready():
 	$Dust.one_shot = true

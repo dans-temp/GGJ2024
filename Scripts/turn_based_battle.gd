@@ -4,6 +4,8 @@ extends Control
 @onready var music_player1 = get_node("/root/GlobalTheme/theme")
 @onready var music_player2 = get_node("/root/GlobalTheme/battle_theme")
 const CROSSHAIR = preload("res://Assets/Sprites/crosshair.png")
+@onready var button_pressed_sfx = $ButtonPressed
+
 var hol_up = false
 signal textbox_closed
 # Called when the node enters the scene tree for the first time.
@@ -36,6 +38,7 @@ func display_text(text):
 	$ActionsPanel.hide()
 
 func _on_run_pressed():
+	button_pressed_sfx.play()
 	display_text("You try to run, but you can't because you remember you're not a little bitch")
 	await self.textbox_closed
 	hol_up = true
@@ -44,6 +47,7 @@ func _on_run_pressed():
 	hol_up = false
 
 func _on_attack_pressed():
+	button_pressed_sfx.play()
 	hol_up = true
 	$ActionsPanel.hide()
 	display_text("You fire a rocket propelled grenade towards the enemy")
@@ -69,6 +73,7 @@ func _on_attack_pressed():
 
 var text_count = 0
 func _on_talk_pressed():
+	button_pressed_sfx.play()
 	if text_count == text.size():
 		end_battle()
 		return

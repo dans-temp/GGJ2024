@@ -18,6 +18,13 @@ func add_point():
 	label.text = "Points: " + str(points)
 
 func _input(event):
+	if Input.is_action_just_pressed("escape"):
+		if !GlobalVars.paused:
+			$"../UI/PauseScreen".show()
+			GlobalVars.paused = true
+		else:
+			$"../UI/PauseScreen".hide()
+			GlobalVars.paused = false
 	# on left click fire RPG
 	if event is InputEventMouseButton and Input.is_action_just_pressed("left-click") && !GlobalVars.disable_movement:
 		character_body_2d.play_gunshot_animation()
