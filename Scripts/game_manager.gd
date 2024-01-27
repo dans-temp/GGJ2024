@@ -19,7 +19,7 @@ func add_point():
 
 func _input(event):
 	# on left click fire RPG
-	if event is InputEventMouseButton and Input.is_action_just_pressed("left-click"):
+	if event is InputEventMouseButton and Input.is_action_just_pressed("left-click") && !GlobalVars.disable_movement:
 		character_body_2d.play_gunshot_animation()
 		var bullet_instance = bullet.instantiate()
 		bullet_instance.z_index = 1

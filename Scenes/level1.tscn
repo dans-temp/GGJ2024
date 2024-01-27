@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bj4biud1rkxfi"]
+[gd_scene load_steps=22 format=3 uid="uid://bj4biud1rkxfi"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_fvt83"]
 [ext_resource type="Texture2D" uid="uid://bdp61k5ikdp6c" path="res://Assets/Backgrounds/Yellow.png" id="2_sf0xn"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://daxhu3l1bnh28" path="res://Assets/Sounds/pick_up_sound.mp3" id="9_oq0gv"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1.gd" id="10_an550"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2.gd" id="10_inx52"]
+[ext_resource type="Script" path="res://Scripts/Turn Battle Trigger.gd" id="11_3ua72"]
 [ext_resource type="Script" path="res://Scripts/Bottom Bound.gd" id="11_hixrg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kheop"]
@@ -477,6 +478,27 @@ sources/0 = SubResource("TileSetAtlasSource_3lhuc")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxxme"]
 size = Vector2(9, 4852)
 
+[sub_resource type="Animation" id="Animation_tmrvt"]
+resource_name = "flicker"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pviyv"]
+_data = {
+"flicker": SubResource("Animation_tmrvt")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crfbo"]
 size = Vector2(3216, 30)
 
@@ -585,7 +607,7 @@ position = Vector2(262, 281)
 script = ExtResource("10_an550")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Dialog Triggers/Dialog 1"]
-position = Vector2(-33, -942)
+position = Vector2(659, -967)
 shape = SubResource("RectangleShape2D_hxxme")
 
 [node name="Dialog 2" type="Area2D" parent="SceneObjects/Dialog Triggers"]
@@ -593,11 +615,34 @@ position = Vector2(490, 278)
 script = ExtResource("10_inx52")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Dialog Triggers/Dialog 2"]
-position = Vector2(-2, -910)
+position = Vector2(-202, -908)
 shape = SubResource("RectangleShape2D_hxxme")
 
+[node name="Turn Battle Trigger" type="Area2D" parent="SceneObjects/Dialog Triggers"]
+position = Vector2(262, 281)
+script = ExtResource("11_3ua72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Dialog Triggers/Turn Battle Trigger"]
+position = Vector2(200, -1017)
+shape = SubResource("RectangleShape2D_hxxme")
+
+[node name="Timer" type="Timer" parent="SceneObjects/Dialog Triggers/Turn Battle Trigger"]
+
+[node name="TransitionRect" type="ColorRect" parent="SceneObjects"]
+modulate = Color(1, 1, 1, 0)
+z_index = 4096
+offset_left = -1176.0
+offset_top = -3192.0
+offset_right = 2667.0
+offset_bottom = 2004.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneObjects/TransitionRect"]
+libraries = {
+"": SubResource("AnimationLibrary_pviyv")
+}
+
 [node name="pick_up_sound" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = ExtResource("9_oq0gv")
 
 [node name="Collision Bounds" type="Node" parent="."]
@@ -611,4 +656,5 @@ shape = SubResource("RectangleShape2D_crfbo")
 
 [connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 1" to="SceneObjects/Dialog Triggers/Dialog 1" method="_on_body_entered"]
 [connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 2" to="SceneObjects/Dialog Triggers/Dialog 2" method="_on_body_entered"]
+[connection signal="body_entered" from="SceneObjects/Dialog Triggers/Turn Battle Trigger" to="SceneObjects/Dialog Triggers/Turn Battle Trigger" method="_on_body_entered"]
 [connection signal="body_entered" from="Collision Bounds/Bottom Bound" to="Collision Bounds/Bottom Bound" method="_on_body_entered"]

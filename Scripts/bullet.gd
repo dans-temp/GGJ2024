@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 @onready var cool_explosion = preload("res://Scenes/cool_explosion.tscn")
 @onready var character_body_2d = $"../../SceneObjects/CharacterBody2D"
 

@@ -5,4 +5,5 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	character_body_2d.position = Vector2(100, 200)
+	if (body.name == "CharacterBody2D"):
+		character_body_2d.position = Vector2(100, 200)

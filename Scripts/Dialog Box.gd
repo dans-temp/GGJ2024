@@ -5,6 +5,7 @@ extends ColorRect
 var dialog
 
 
+@onready var transition_sprite = $"../transition_sprite"
 var phraseNum = 0
 var finished = false
 
