@@ -7,6 +7,6 @@
 	"1-2":
 		[
 				{"Name":"[center]me", "image":"mask", "Text": "[rainbow freq=1.0 sat=0.8 val=0.8]RAINBOW TEST "},
-				{"Name":"[center]me", "image":"mask", "Text": "yay this is a really long bit of text yay this is a really long bit of text yay this is a really [shake radius=20]long bit of text"},
+				{"Name":"[center]me", "image":"mask", "Text": "[tornado]yay this is a really long bit[/tornado] of text yay this is a really long bit of text yay this is a really [shake radius=20]long bit of text"},
 		]
 }

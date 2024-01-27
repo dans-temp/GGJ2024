@@ -263,7 +263,7 @@ position = Vector2(-2.66667, 5.66667)
 script = ExtResource("5_arplb")
 
 [node name="RPG" type="Sprite2D" parent="CharacterContainer/Sprite2D/Marker2D"]
-position = Vector2(0, 4.76837e-07)
+position = Vector2(0.66667, -0.66667)
 texture = ExtResource("6_sjfh4")
 offset = Vector2(5, -3)
 
