@@ -19,6 +19,9 @@ func _ready():
 
 func _input(event):
 	if (Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("left-click")) and $TextBox.visible and !hol_up:
+		if $TextBox/Label.text == 	"*THE ENEMY HAS FLED BATTLE*":
+			end_battle()
+			return
 		$TextBox.hide()
 		emit_signal("textbox_closed")
 		$ActionsPanel.hide()
@@ -79,9 +82,6 @@ func _on_attack_pressed():
 var text_count = 0
 func _on_talk_pressed():
 	button_pressed_sfx.play()
-	if text_count == text.size():
-		end_battle()
-		return
 	display_text(text[text_count])
 	text_count = text_count + 1
 	hol_up = true
@@ -127,5 +127,3 @@ var text = [
 	"Here's my number king... chow lil'bro",
 	"*THE ENEMY HAS FLED BATTLE*"
 	]
-
-

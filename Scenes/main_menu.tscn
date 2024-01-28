@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://1raaa5183fu2"]
+[gd_scene load_steps=15 format=3 uid="uid://1raaa5183fu2"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_1e4vt"]
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="2_tpfjc"]
@@ -7,12 +7,36 @@
 [ext_resource type="Texture2D" uid="uid://bu7ve5w1gc283" path="res://Assets/Backgrounds/Sky_Background_2.png" id="4_eotbp"]
 [ext_resource type="FontFile" uid="uid://bhrtrt4jyvcpy" path="res://Assets/Fonts/Fuente-Metal-Slug-Latino-master/Metal Slug Latino Regular.ttf" id="5_urpyf"]
 [ext_resource type="FontFile" uid="uid://bssi4f8okwtq7" path="res://Assets/Fonts/Fuente-Metal-Slug-Latino-master/Metal Slug Latino Regular.otf" id="6_6w5ju"]
+[ext_resource type="Texture2D" uid="uid://dctmu3c5xdjcn" path="res://Assets/Sprites/mario-idle.png" id="8_xls7f"]
+[ext_resource type="Texture2D" uid="uid://dw8dxyfkf5bpu" path="res://Assets/Sprites/rpg.png" id="9_8a0kj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o337n"]
 bg_color = Color(0.866667, 0.34902, 0.227451, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ltq2"]
 bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6u2d"]
+atlas = ExtResource("8_xls7f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b840c"]
+atlas = ExtResource("8_xls7f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wnbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6u2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b840c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_1e4vt")
@@ -82,10 +106,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = 76.0
-offset_right = 110.0
-offset_bottom = 132.0
+offset_left = -112.0
+offset_top = 209.0
+offset_right = 108.0
+offset_bottom = 265.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_urpyf")
@@ -94,22 +118,35 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_o337n")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5ltq2")
 text = "play game"
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(573, 375)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_5wnbo")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-6.1, -1.9)
+rotation = 1.67186
+texture = ExtResource("9_8a0kj")
+flip_h = true
+flip_v = true
+
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -210.5
-offset_top = -152.5
-offset_right = 210.5
-offset_bottom = -49.5
+offset_left = -443.0
+offset_top = -182.0
+offset_right = 468.0
+offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.992157, 0.862745, 0.376471, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_6w5ju")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "SUPER RPG WORLD"
 
 [connection signal="timeout" from="ParallaxBackground/Timer" to="ParallaxBackground" method="_on_timer_timeout"]

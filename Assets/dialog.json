@@ -1,8 +1,8 @@
 { 
 	"1-1":
 		[
-				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Your mission is simlpe"},
-				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Rescue your girlfirend, bring the president home, and save America"},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Your mission is simple."},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Rescue your girlfriend, bring the president home, and save America!"},
 		],
 	"1-2":
 		[
@@ -12,8 +12,8 @@
 	"1-3":
 		[
 				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Eyes up Soilder!"},
-				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Looks like the boss of this level is up a head."},
-				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Hold your fire until you have a clear shot"},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Looks like the boss of this level is up ahead."},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Hold your fire until you have a clear shot."},
 		],
 	"2-1":
 		[
@@ -31,7 +31,7 @@
 		[
 			{"Name":"[center]Flying Plant", "image":"Pirana Plant", "Text": "Psssst! Hey whats up man"},
 			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "Nice to meet you, my names Joe. I might look like I bite, but if you look closely I don't have any teeth"},
-			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "[shake]WHOA COWBOY[/shake], I see you're packing a giant grenade launcher of sorts, piraNAH?"},
+			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "[shake]WHOA COWBOY[/shake], I see you're packing a giant grenade launcher of sorts, you got a permit for that thing?"},
 			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "You need to move quick!"},
 			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "The only way you can clear that gap is by using Joe as a launch pad for a [rainbow]ROCKET JUMP[/rainbow]"}
 		],
