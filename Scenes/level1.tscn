@@ -11,11 +11,11 @@
 [ext_resource type="Script" path="res://Scripts/enemy_toad.gd" id="9_axyve"]
 [ext_resource type="PackedScene" uid="uid://ddbtqwjgrhjlc" path="res://Scenes/enemy_mooba.tscn" id="9_gw6wc"]
 [ext_resource type="AudioStream" uid="uid://daxhu3l1bnh28" path="res://Assets/Sounds/pick_up_sound.mp3" id="9_oq0gv"]
-[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1.gd" id="10_an550"]
-[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2.gd" id="10_inx52"]
+[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1-1.gd" id="10_an550"]
+[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1-2.gd" id="10_inx52"]
 [ext_resource type="Script" path="res://Scripts/Turn Battle Trigger.gd" id="11_3ua72"]
 [ext_resource type="Script" path="res://Scripts/Bottom Bound.gd" id="11_hixrg"]
-[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 3.gd" id="12_yxp27"]
+[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1-3.gd" id="12_yxp27"]
 
 [sub_resource type="Animation" id="Animation_tmrvt"]
 resource_name = "flicker"

@@ -14,7 +14,8 @@ var isLeft = false
 var flip_scale = Vector2(-1, 1)
 
 func _ready():
-	position = GlobalVars.player_return_position
+	position = GlobalVars.player_return_position 
+
 
 func _physics_process(delta):
 	if !GlobalVars.disable_movement:

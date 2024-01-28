@@ -31,18 +31,13 @@
 		[
 			{"Name":"[center]Flying Plant", "image":"Pirana Plant", "Text": "Psssst! Hey whats up man"},
 			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "Nice to meet you, my names Joe. I might look like I bite, but if you look closely I don't have any teeth"},
-			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "[shake]WHOA COWBOY[/shake], I see you're packing a giant grenade launcher of sorts, piraNAH?"},
+			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "[shake]WHOA COWBOY[/shake], I see you're packing a giant grenade launcher of sorts, you got a license for that thing?"},
 			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "You need to move quick!"},
 			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "The only way you can clear that gap is by using Joe as a launch pad for a [rainbow]ROCKET JUMP[/rainbow]"}
 		],
-	"2-4":
+		"2-4":
 		[
-			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text":"Looks like the only way to the next level is though that sewage pipe."},
-			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "Oh come on... a little feces never killed anyone."}
-		],
-	"3-1":
-		[
-			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text":"WOW it's sure dark in there... who woulda thought?"},
-			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "You'll have to figure out a way to light up your surroundings"}
+			{"Name":"[center]Flying Plant", "image":"Looks like the only way to the next level is though that sewage pipe."},
+			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "Oh come on a little dirt never killed anyone."}
 		]
 	}

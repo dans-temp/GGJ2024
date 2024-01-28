@@ -7,4 +7,4 @@ var turn_battle_complete = 0
 var turn_battle_enemy = null
 var paused = false
 var player_return_position = Vector2(100, 500)
-var lvl2_cutscenes_played = [false,false,false]
+var lvl2_cutscenes_played = [false,false,false,false]

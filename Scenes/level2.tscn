@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://drmk5rvfqfjg6"]
+[gd_scene load_steps=24 format=3 uid="uid://drmk5rvfqfjg6"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_sctxa"]
 [ext_resource type="Texture2D" uid="uid://bdp61k5ikdp6c" path="res://Assets/Backgrounds/Yellow.png" id="2_x8ygn"]
@@ -6,12 +6,14 @@
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="4_wtciq"]
 [ext_resource type="PackedScene" uid="uid://ctrdic11jd6ef" path="res://Scenes/pipe.tscn" id="5_vyo0d"]
 [ext_resource type="Script" path="res://Scripts/garbage.gd" id="6_6qvrf"]
+[ext_resource type="PackedScene" uid="uid://daa1sucpbfi0g" path="res://Scenes/level3.tscn" id="6_w523g"]
 [ext_resource type="PackedScene" uid="uid://bsowjdx0tto7c" path="res://Scenes/enemy_frog.tscn" id="7_i0hen"]
 [ext_resource type="PackedScene" uid="uid://dnyq1pr8or7tf" path="res://Scenes/enemy_plant.tscn" id="8_s34j8"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2-2.gd" id="10_r4y4e"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2-1.gd" id="11_a2qgg"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2-3.gd" id="11_agsd0"]
 [ext_resource type="AudioStream" uid="uid://daxhu3l1bnh28" path="res://Assets/Sounds/pick_up_sound.mp3" id="12_cpint"]
+[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 2-4.gd" id="13_nnr66"]
 [ext_resource type="Script" path="res://Scripts/Bottom Bound L2.gd" id="13_wkb8c"]
 
 [sub_resource type="Animation" id="Animation_tmrvt"]
@@ -582,7 +584,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3lhuc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_raf00"]
-size = Vector2(63.5, 5)
+size = Vector2(67.75, 12.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxxme"]
 size = Vector2(9, 4852)
@@ -697,13 +699,14 @@ drag_top_margin = 0.7
 script = ExtResource("4_wtciq")
 
 [node name="Pipe" parent="SceneObjects" instance=ExtResource("5_vyo0d")]
-position = Vector2(5242, -304)
+position = Vector2(5258, -305)
 
 [node name="Area2D" type="Area2D" parent="SceneObjects/Pipe"]
 script = ExtResource("6_6qvrf")
+target_level = ExtResource("6_w523g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Pipe/Area2D"]
-position = Vector2(2.25, 2)
+position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_raf00")
 
 [node name="Enemies" type="Node" parent="SceneObjects"]
@@ -743,7 +746,15 @@ position = Vector2(490, 278)
 script = ExtResource("11_agsd0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Dialog Triggers/Dialog 3"]
-position = Vector2(2095, -807)
+position = Vector2(2091, -809)
+shape = SubResource("RectangleShape2D_hxxme")
+
+[node name="Dialog 4" type="Area2D" parent="SceneObjects/Dialog Triggers"]
+position = Vector2(490, 278)
+script = ExtResource("13_nnr66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Dialog Triggers/Dialog 4"]
+position = Vector2(4640, -715)
 shape = SubResource("RectangleShape2D_hxxme")
 
 [node name="pick_up_sound" type="AudioStreamPlayer2D" parent="."]
@@ -762,4 +773,5 @@ shape = SubResource("RectangleShape2D_crfbo")
 [connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 1" to="SceneObjects/Dialog Triggers/Dialog 1" method="_on_body_entered"]
 [connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 2" to="SceneObjects/Dialog Triggers/Dialog 2" method="_on_body_entered"]
 [connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 3" to="SceneObjects/Dialog Triggers/Dialog 3" method="_on_body_entered"]
+[connection signal="body_entered" from="SceneObjects/Dialog Triggers/Dialog 4" to="SceneObjects/Dialog Triggers/Dialog 4" method="_on_body_entered"]
 [connection signal="body_entered" from="Collision Bounds/Bottom Bound L2" to="Collision Bounds/Bottom Bound L2" method="_on_body_entered"]

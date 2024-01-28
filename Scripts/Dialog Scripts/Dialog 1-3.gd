@@ -8,5 +8,4 @@ func _on_body_entered(body):
 		dialog_manager_instance = dialog_manager_scene.instantiate()
 		GlobalVars.scenario = "1-3"
 		add_child(dialog_manager_instance)
-		GlobalVars.lvl2_cutscenes_played[2] = true
 		GlobalVars.player_return_position = $"../../CharacterBody2D".position
