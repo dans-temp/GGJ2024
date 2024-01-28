@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dnyq1pr8or7tf"]
 
-[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_ccang"]
+[ext_resource type="Script" path="res://Scripts/enemy_plant.gd" id="1_0eikl"]
 [ext_resource type="Texture2D" uid="uid://rmiqw08rbfv5" path="res://Assets/Sprites/flying-pirana-plant.png" id="2_nwwgw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sd3j4"]
@@ -39,13 +39,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnqyk"]
-radius = 24.8453
-height = 86.1434
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_535sn"]
+size = Vector2(63.2348, 87.9893)
 
 [node name="enemy" type="CharacterBody2D"]
 texture_filter = 1
-script = ExtResource("1_ccang")
+script = ExtResource("1_0eikl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -56,6 +55,6 @@ frame = 1
 frame_progress = 0.522588
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 2)
-rotation = 3.17223
-shape = SubResource("CapsuleShape2D_lnqyk")
+position = Vector2(4.22845, 1.17556)
+rotation = -3.11096
+shape = SubResource("RectangleShape2D_535sn")

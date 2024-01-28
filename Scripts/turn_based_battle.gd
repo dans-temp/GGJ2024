@@ -48,6 +48,7 @@ func _on_run_pressed():
 
 func _on_attack_pressed():
 	if !hol_up:
+		$missle.show()
 		button_pressed_sfx.play()
 		hol_up = true
 		$ActionsPanel.hide()
@@ -123,7 +124,8 @@ var text = [
 	"Hey sorry about that, didn't mean to leave you hangin'",
 	"OHHH CRAP LOOK AT THE TIME",
 	"I gotta jet, but if you ever want to invest in my crypto day trading, it's totally safe and you can expect 10x returns",
-	"Here's my number king... pce"
+	"Here's my number king... chow lil'bro",
+	"*THE ENEMY HAS FLED BATTLE*"
 	]
 
 

@@ -70,6 +70,39 @@ _data = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m8fiq"]
 bg_color = Color(0, 0, 0, 0.870588)
 
+[sub_resource type="Animation" id="Animation_k1d2w"]
+resource_name = "fly"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(353, 382), Vector2(534, 266)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12, 12), Vector2(4, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dbfe8"]
+_data = {
+"fly": SubResource("Animation_k1d2w")
+}
+
 [sub_resource type="Animation" id="Animation_0yvnl"]
 resource_name = "slide"
 tracks/0/type = "value"
@@ -129,27 +162,6 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rc6fg"]
 _data = {
 "flashing": SubResource("Animation_i2i4i")
-}
-
-[sub_resource type="Animation" id="Animation_k1d2w"]
-resource_name = "fly"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(563, 763), Vector2(574, 327)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_dbfe8"]
-_data = {
-"fly": SubResource("Animation_k1d2w")
 }
 
 [sub_resource type="GDScript" id="GDScript_m6f88"]
@@ -299,8 +311,20 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_p2eme")
 step = 1.0
 value = 100.0
 
+[node name="missle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(353, 382)
+rotation = 1.22173
+scale = Vector2(12, 12)
+texture = ExtResource("4_lteal")
+
+[node name="missle_animation" type="AnimationPlayer" parent="missle"]
+libraries = {
+"": SubResource("AnimationLibrary_dbfe8")
+}
+
 [node name="mairo" type="Sprite2D" parent="."]
-position = Vector2(900, 412)
+position = Vector2(247, 412)
 scale = Vector2(10, 10)
 texture = ExtResource("4_pq4m4")
 
@@ -407,16 +431,6 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.669
-
-[node name="missle" type="Sprite2D" parent="."]
-position = Vector2(563, 763)
-scale = Vector2(12, 12)
-texture = ExtResource("4_lteal")
-
-[node name="missle_animation" type="AnimationPlayer" parent="missle"]
-libraries = {
-"": SubResource("AnimationLibrary_dbfe8")
-}
 
 [node name="launch_sfx" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_3ypuj")

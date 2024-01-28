@@ -14,5 +14,25 @@
 				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Eyes up Soilder!"},
 				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Looks like the boss of this level is up a head."},
 				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Hold your fire until you have a clear shot"},
+		],
+	"2-1":
+		[
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "It's a good thing we have you on our side."},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "This gap ahead looks like a pretty big jump"},
+				{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Shoot a RPG at your feet and and you should be able to clear it with a [rainbow]ROCKET JUMP"}
+		],
+	"2-2":
+		[	
+			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Yeee Haw Solider."},
+			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "That explosive repellent skin of yours is sure one fancy party trick!"},
+			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "Keep your eyes out for more of them [shake]communist[/shake] bastards."}
+		],
+	"2-3":
+		[
+			{"Name":"[center]Flying Plant", "image":"Pirana Plant", "Text": "Psssst! Hey whats up man"},
+			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "Nice to meet you, my names Joe. I might look like I bite, but if you look closely I don't have any teeth"},
+			{"Name":"[center]Joe", "image":"Pirana Plant", "Text": "[shake]WHOA COWBOY[/shake], I see you're packing a giant grenade launcher of sorts, you got a license for that thing?"},
+			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "You need to move quick!"},
+			{"Name":"[center]Sergeant Sarge", "image":"Sergeant Sarge", "Text": "The only way you can clear that gap is by using Joe as a launch pad for a [rainbow]ROCKET JUMP[/rainbow]"}
 		]
-}
+	}
