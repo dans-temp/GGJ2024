@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bj4biud1rkxfi"]
+[gd_scene load_steps=24 format=3 uid="uid://bj4biud1rkxfi"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_fvt83"]
 [ext_resource type="Texture2D" uid="uid://bdp61k5ikdp6c" path="res://Assets/Backgrounds/Yellow.png" id="2_sf0xn"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bsowjdx0tto7c" path="res://Scenes/enemy_frog.tscn" id="7_71o66"]
 [ext_resource type="PackedScene" uid="uid://t3lx7ksmdhsd" path="res://Scenes/enemy_toad.tscn" id="8_jxsss"]
 [ext_resource type="PackedScene" uid="uid://1raaa5183fu2" path="res://Scenes/main_menu.tscn" id="8_v8ib6"]
+[ext_resource type="Script" path="res://Scripts/enemy_toad.gd" id="9_axyve"]
 [ext_resource type="PackedScene" uid="uid://ddbtqwjgrhjlc" path="res://Scenes/enemy_mooba.tscn" id="9_gw6wc"]
 [ext_resource type="AudioStream" uid="uid://daxhu3l1bnh28" path="res://Assets/Sounds/pick_up_sound.mp3" id="9_oq0gv"]
 [ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 1.gd" id="10_an550"]
@@ -708,6 +709,7 @@ position = Vector2(1017, 213)
 
 [node name="enemy2" parent="SceneObjects/Enemies" instance=ExtResource("8_jxsss")]
 position = Vector2(3627, 434)
+script = ExtResource("9_axyve")
 
 [node name="enemy3" parent="SceneObjects/Enemies" instance=ExtResource("9_gw6wc")]
 position = Vector2(1208, 529)

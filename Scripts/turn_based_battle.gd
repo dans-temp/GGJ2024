@@ -90,7 +90,7 @@ func _on_talk_pressed():
 	
 	
 func end_battle():
-	GlobalVars.turn_battle_complete = true
+	GlobalVars.turn_battle_complete += 1
 	GlobalVars.disable_fire = false
 	music_player2.stop()
 	music_player1.play()
@@ -111,7 +111,19 @@ var text = [
 	"I can feel it",
 	"[shake]RING RING RING[/shake]",
 	"[shake]RING RING RING[/shake]",
-	"Yo hang on a sec breh, mind if I take this?"
+	"Yo hang on a sec breh, mind if I take this? My phones poppin' off today",
+	"Yo sup Kev Dog! Your boy doing good real good",
+	"I was just saying, big things are coming up",
+	"yeah?",
+	"nah the divorce is [tornado]nothing[/tornado] man",
+	"I guess I'll miss the kids but you know what they say.  Win some you lose some.",
+	"Anyways my guy I gotta take off, I've got a live one on the hook.",
+	"Catch you on the flippyity flip Kev Dingo",
+	"[shake]CLICK",
+	"Hey sorry about that, didn't mean to leave you hangin'",
+	"OHHH CRAP LOOK AT THE TIME",
+	"I gotta jet, but if you ever want to invest in my crypto day trading, it's totally safe and you can expect 10x returns",
+	"Here's my number king... pce"
 	]
 
 
