@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GGJ2024"
-run/main_scene="res://Scenes/level5.tscn"
+run/main_scene="res://Scenes/level3.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
@@ -21,6 +21,7 @@ GlobalVars="*res://Scripts/global_vars.gd"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 mouse_cursor/custom_image="res://Assets/Sprites/crosshair.png"
@@ -69,5 +70,6 @@ escape={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 viewport/hdr_2d=true

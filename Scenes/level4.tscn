@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dfdvl046njpxo" path="res://Scenes/character.tscn" id="3_w3i24"]
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="4_iwsuk"]
 [ext_resource type="Script" path="res://Scripts/Spaw.gd" id="5_fntj0"]
-[ext_resource type="Script" path="res://Scripts/Dialog Scripts/4-1.gd" id="6_w3r66"]
+[ext_resource type="Script" path="res://Scripts/Dialog Scripts/Dialog 4-1.gd" id="6_w3r66"]
 [ext_resource type="Script" path="res://Scripts/DIalog Scripts/Dialog 4-2.gd" id="7_cowhc"]
 [ext_resource type="PackedScene" uid="uid://2hh6g8720tx8" path="res://Scenes/level5.tscn" id="9_406hg"]
 [ext_resource type="Script" path="res://Scripts/Bottom Bound.gd" id="10_aonmg"]
