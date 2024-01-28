@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dahj888x78m8q"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_1urjw"]
+[ext_resource type="Texture2D" uid="uid://b03a3mbae6a00" path="res://Assets/Sprites/brickwall.png" id="2_mpkn5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4q2h"]
+atlas = ExtResource("2_mpkn5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q20jh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4q2h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_750wq"]
+size = Vector2(141, 138)
+
+[node name="enemy" type="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_1urjw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_q20jh")
+autoplay = "default"
+frame_progress = 0.810065
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -1)
+shape = SubResource("RectangleShape2D_750wq")

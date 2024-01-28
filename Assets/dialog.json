@@ -44,5 +44,38 @@
 		[
 			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text":"WOW it's sure dark in there... who woulda thought?"},
 			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "You'll have to figure out a way to light up your surroundings"}
+		],
+	"4-1":
+		[
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text":"Thought I lost you there for a second."},
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "You're almost at the objective, just keep movin'."}
+		],
+	"4-2":
+		[
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text":"[shake]DO YOU HEAR THAT??!"},
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "[shake]INCOMING STAMPEDE, FIRE AS FAST AS YOU CAN AND GET UP THAT HILL"}
+		],
+	"5-1":
+		[
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "This next jump looks tricky"},
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "To make this jump you will need shoot yourself in mid air"},
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "First do a [rainbow]ROCKET JUMP[/rainbow] then aim at your feet in mid air and fire!"},
+		],
+	"5-2":
+		[
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "You're almost at the final boss."},
+			{"Name":"[center]Sergeant Sarge",  "image":"Sergeant Sarge", "Text": "There are 4 walls up ahead, you just have to berak though them and you'll be there"}
+		],
+	"5-3":
+		[
+			{"Name":"[center]Broken 4th Wall",  "image":"brickwall", "Text": "This game isn't even funny."},
+			{"Name":"[center]Broken 4th Wall",  "image":"brickwall", "Text": "It's just: What if mario had a rocket launcher? ...and that's the joke."},
+			{"Name":"[center]Broken 4th Wall",  "image":"brickwall", "Text": "There's nothing clever about asking: 'What if RPG meant rocket-propelled grenade, instead of role playing game?'"},
+			{"Name":"[center]Broken 4th Wall",  "image":"brickwall", "Text": "I mean where's the humor there? This whole experience is just a lazy attempt in pandering"}
+		],
+	"5-4":
+		[
+			{"Name":"[center]????",  "image":"god", "Text": "Look's like you're having a tough time."},
+			{"Name":"[center]????",  "image":"god", "Text": "Let me advance you to the platform."},
 		]
 	}

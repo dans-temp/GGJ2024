@@ -61,16 +61,6 @@ grow_vertical = 0
 color = Color(0.101961, 0.101961, 0.101961, 1)
 script = ExtResource("1_1532h")
 
-[node name="Name" type="RichTextLabel" parent="Dialog Box"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 130.0
-offset_right = 115.0
-offset_bottom = 172.0
-theme_override_colors/default_color = Color(0.858824, 0.858824, 0.858824, 1)
-bbcode_enabled = true
-text = "Name "
-
 [node name="Text" type="RichTextLabel" parent="Dialog Box"]
 texture_filter = 1
 layout_mode = 0
@@ -86,6 +76,16 @@ text = "Words Go Here"
 position = Vector2(57, 67)
 scale = Vector2(3.05264, 2.96875)
 texture = SubResource("CompressedTexture2D_oi2ei")
+
+[node name="Name" type="RichTextLabel" parent="Dialog Box"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 130.0
+offset_right = 115.0
+offset_bottom = 172.0
+theme_override_colors/default_color = Color(0.858824, 0.858824, 0.858824, 1)
+bbcode_enabled = true
+text = "Name "
 
 [node name="Indicator" type="AnimatedSprite2D" parent="Dialog Box"]
 position = Vector2(634, 180)

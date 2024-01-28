@@ -5,6 +5,7 @@ var dialog_manager_instance = null
 func _on_body_entered(body):
 	if body.name == "CharacterBody2D" and dialog_manager_instance == null:
 		dialog_manager_instance = dialog_manager_scene.instantiate()
-		GlobalVars.scenario = "4-2"
+		GlobalVars.scenario = "5-1"
 		add_child(dialog_manager_instance)
 		GlobalVars.player_return_position = $"../../CharacterBody2D".position
+
