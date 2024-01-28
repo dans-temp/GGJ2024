@@ -47,28 +47,32 @@ func _on_run_pressed():
 	hol_up = false
 
 func _on_attack_pressed():
-	button_pressed_sfx.play()
-	hol_up = true
-	$ActionsPanel.hide()
-	display_text("You fire a rocket propelled grenade towards the enemy")
-	$launch_sfx.play()
-	missle_animation.play("fly")
-	$Timer.start(0.5)
-	await $Timer.timeout
-	$missle.hide()
-	#await self.textbox_closed
-	$EnemyContainer/ProgressBar.value = 0
-	$EnemyDamaged.play("flashing")
-	var explo_instance = cool_explosion.instantiate()
-	explo_instance.z_index = 1
-	explo_instance.global_position = get_viewport_rect().size/2
-	get_parent().add_child(explo_instance)
-	get_parent().add_child(explo_instance)
-	$Timer.start(1)
-	await $Timer.timeout
-	$Timer.start(1)
-	await $Timer.timeout
-	end_battle()
+	if !hol_up:
+		button_pressed_sfx.play()
+		hol_up = true
+		$ActionsPanel.hide()
+		display_text("You fire a rocket propelled grenade towards the enemy")
+		$launch_sfx.play()
+		missle_animation.play("fly")
+		$Timer.start(0.5)
+		await $Timer.timeout
+		$missle.hide()
+		#await self.textbox_closed
+		$EnemyContainer/ProgressBar.value = 0
+		$EnemyDamaged.play("flashing")
+		$TextBox.hide()
+		var explo_instance = cool_explosion.instantiate()
+		$TextBox.hide()
+		explo_instance.z_index = 1
+		explo_instance.global_position = get_viewport_rect().size/2
+		get_parent().add_child(explo_instance)
+		get_parent().add_child(explo_instance)
+		$Timer.start(1)
+		await $Timer.timeout
+		$TextBox.hide()
+		$Timer.start(1)
+		await $Timer.timeout
+		end_battle()
 
 
 var text_count = 0

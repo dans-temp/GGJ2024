@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://1raaa5183fu2"]
+[gd_scene load_steps=9 format=3 uid="uid://1raaa5183fu2"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_1e4vt"]
-[ext_resource type="Texture2D" uid="uid://5kbr8747ewqe" path="res://Assets/Backgrounds/Blue.png" id="2_x40o5"]
+[ext_resource type="Texture2D" uid="uid://vymxhwi80voe" path="res://Assets/Backgrounds/Sky_Background_0.png" id="2_ynudc"]
+[ext_resource type="Texture2D" uid="uid://bxwkh4a74f6rn" path="res://Assets/Backgrounds/Sky_Background_1.png" id="3_1ouos"]
+[ext_resource type="Texture2D" uid="uid://bu7ve5w1gc283" path="res://Assets/Backgrounds/Sky_Background_2.png" id="4_eotbp"]
+[ext_resource type="FontFile" uid="uid://bhrtrt4jyvcpy" path="res://Assets/Fonts/Fuente-Metal-Slug-Latino-master/Metal Slug Latino Regular.ttf" id="5_urpyf"]
+[ext_resource type="FontFile" uid="uid://bssi4f8okwtq7" path="res://Assets/Fonts/Fuente-Metal-Slug-Latino-master/Metal Slug Latino Regular.otf" id="6_6w5ju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o337n"]
+bg_color = Color(0.866667, 0.34902, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ltq2"]
+bg_color = Color(1, 0, 0, 1)
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_1e4vt")
@@ -13,8 +23,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_x40o5")
-stretch_mode = 1
+texture = ExtResource("2_ynudc")
+
+[node name="Background2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_1ouos")
+
+[node name="Background3" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_eotbp")
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -28,8 +55,11 @@ offset_right = 110.0
 offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_urpyf")
 theme_override_font_sizes/font_size = 30
-text = "Play Game"
+theme_override_styles/normal = SubResource("StyleBoxFlat_o337n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5ltq2")
+text = "play game"
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -43,8 +73,10 @@ offset_right = 210.5
 offset_bottom = -49.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.92549, 0.654902, 0, 1)
+theme_override_colors/font_color = Color(0.85098, 0.866667, 0.937255, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_6w5ju")
 theme_override_font_sizes/font_size = 75
-text = "Jump Game"
+text = "SUPER RPG WORLD"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
