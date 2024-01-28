@@ -29,6 +29,7 @@ func _physics_process(delta):
 
 		# Handle jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
+			$jumpsound.play()
 			velocity.y = JUMP_VELOCITY
 			
 		if player_position.x > get_global_mouse_position().x:

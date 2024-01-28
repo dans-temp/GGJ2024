@@ -28,7 +28,7 @@ mouse_cursor/custom_image_hotspot=Vector2(42, 26)
 
 [gui]
 
-theme/custom_font="res://Assets/Fonts/Press_Start_2P/PressStart2P-Regular.ttf"
+theme/custom_font="res://Assets/Fonts/joystix/joystix monospace.otf"
 
 [input]
 
