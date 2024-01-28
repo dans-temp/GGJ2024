@@ -28,3 +28,7 @@ func start_shake(intensity, duration):
 	is_shaking = true
 	shake_intensity = intensity
 	shake_duration = duration
+
+func _ready():
+	GlobalVars.shake_camera.connect(func (): 
+		start_shake(10.0, 0.006))

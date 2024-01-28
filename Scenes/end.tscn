@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://hthspswh65pa"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_ywm4t"]
+[ext_resource type="Texture2D" uid="uid://vymxhwi80voe" path="res://Assets/Backgrounds/Sky_Background_0.png" id="3_8w52o"]
+[ext_resource type="Texture2D" uid="uid://bxwkh4a74f6rn" path="res://Assets/Backgrounds/Sky_Background_1.png" id="4_1ojqu"]
+[ext_resource type="Texture2D" uid="uid://bu7ve5w1gc283" path="res://Assets/Backgrounds/Sky_Background_2.png" id="5_1cyka"]
+[ext_resource type="Texture2D" uid="uid://dctmu3c5xdjcn" path="res://Assets/Sprites/mario-idle.png" id="7_rf1r1"]
+[ext_resource type="Texture2D" uid="uid://dw8dxyfkf5bpu" path="res://Assets/Sprites/rpg.png" id="8_ga7ie"]
+[ext_resource type="FontFile" uid="uid://bssi4f8okwtq7" path="res://Assets/Fonts/Fuente-Metal-Slug-Latino-master/Metal Slug Latino Regular.otf" id="9_kbyxt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6u2d"]
+atlas = ExtResource("7_rf1r1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b840c"]
+atlas = ExtResource("7_rf1r1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wnbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6u2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b840c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_ywm4t")
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8w52o")
+
+[node name="Background2" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1ojqu")
+
+[node name="Background3" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_1cyka")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(573, 375)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_5wnbo")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-6.1, -1.9)
+rotation = 1.67186
+texture = ExtResource("8_ga7ie")
+flip_h = true
+flip_v = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.0
+offset_top = 93.0
+offset_right = 134.0
+offset_bottom = 196.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.992157, 0.862745, 0.376471, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_kbyxt")
+theme_override_font_sizes/font_size = 80
+text = "LE FIN"
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = 131.0
+offset_right = 490.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.992157, 0.862745, 0.376471, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_kbyxt")
+theme_override_font_sizes/font_size = 80
+text = "YOU SAVED THE WORLD"
