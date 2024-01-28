@@ -1,7 +1,7 @@
 extends ColorRect
 
 @export var dialogPath = "res://Assets/dialog.json"
-@export var textSpeed = 0.04
+@export var textSpeed = 0.03
 var dialog
 
 

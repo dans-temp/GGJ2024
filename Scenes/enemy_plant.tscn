@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnyq1pr8or7tf"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_ccang"]
+[ext_resource type="Texture2D" uid="uid://rmiqw08rbfv5" path="res://Assets/Sprites/flying-pirana-plant.png" id="2_nwwgw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd3j4"]
+atlas = ExtResource("2_nwwgw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0hm7"]
+atlas = ExtResource("2_nwwgw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx4io"]
+atlas = ExtResource("2_nwwgw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg4cu"]
+atlas = ExtResource("2_nwwgw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q20jh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sd3j4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0hm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx4io")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg4cu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnqyk"]
+radius = 24.8453
+height = 86.1434
+
+[node name="enemy" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_ccang")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_q20jh")
+autoplay = "default"
+frame = 1
+frame_progress = 0.522588
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 2)
+rotation = 3.17223
+shape = SubResource("CapsuleShape2D_lnqyk")

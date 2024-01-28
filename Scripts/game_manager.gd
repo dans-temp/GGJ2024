@@ -26,7 +26,7 @@ func _input(event):
 			$"../UI/PauseScreen".hide()
 			GlobalVars.paused = false
 	# on left click fire RPG
-	if event is InputEventMouseButton and Input.is_action_just_pressed("left-click") && !GlobalVars.disable_movement:
+	if event is InputEventMouseButton and Input.is_action_just_pressed("left-click") && !GlobalVars.disable_movement && !GlobalVars.disable_fire:
 		character_body_2d.play_gunshot_animation()
 		var bullet_instance = bullet.instantiate()
 		bullet_instance.z_index = 1

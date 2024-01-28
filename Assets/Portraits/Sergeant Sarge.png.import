@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4d0x6odj5mt6"
-path="res://.godot/imported/Jump (32x32).png-9352a85acb0eeb0e5e73491db0e546eb.ctex"
+uid="uid://c2a3bxxmd4bh6"
+path="res://.godot/imported/Sergeant Sarge.png-89ad684b94ac72ad801941f94b218c89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Jump (32x32).png"
-dest_files=["res://.godot/imported/Jump (32x32).png-9352a85acb0eeb0e5e73491db0e546eb.ctex"]
+source_file="res://Assets/Portraits/Sergeant Sarge.png"
+dest_files=["res://.godot/imported/Sergeant Sarge.png-89ad684b94ac72ad801941f94b218c89.ctex"]
 
 [params]
 

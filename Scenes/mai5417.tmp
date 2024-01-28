@@ -21,30 +21,19 @@ script = ExtResource("1_1e4vt")
 script = ExtResource("2_tpfjc")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1146, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(573, 324)
-scale = Vector2(3.5875, 3.58889)
 texture = ExtResource("2_ynudc")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1142, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(590.5, 318.5)
-scale = Vector2(3.66562, 3.76111)
 texture = ExtResource("3_1ouos")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1134, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(577.5, 326)
-scale = Vector2(3.58437, 3.56667)
 texture = ExtResource("4_eotbp")
-
-[node name="Timer" type="Timer" parent="ParallaxBackground"]
 
 [node name="Background" type="TextureRect" parent="."]
 visible = false
@@ -106,11 +95,10 @@ offset_right = 210.5
 offset_bottom = -49.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.992157, 0.862745, 0.376471, 1)
+theme_override_colors/font_color = Color(0.85098, 0.866667, 0.937255, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_6w5ju")
 theme_override_font_sizes/font_size = 75
 text = "SUPER RPG WORLD"
 
-[connection signal="timeout" from="ParallaxBackground/Timer" to="ParallaxBackground" method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

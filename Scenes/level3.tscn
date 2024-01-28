@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://daa1sucpbfi0g"]
+[gd_scene load_steps=15 format=3 uid="uid://daa1sucpbfi0g"]
 
 [ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_sctxa"]
 [ext_resource type="Texture2D" uid="uid://csw34p1ct1o5n" path="res://Assets/Backgrounds/Forest_Background_0.png" id="2_0bf58"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="4_wtciq"]
 [ext_resource type="PackedScene" uid="uid://b7comlk40uocg" path="res://Scenes/finish.tscn" id="6_1iubj"]
 [ext_resource type="PackedScene" uid="uid://1raaa5183fu2" path="res://Scenes/main_menu.tscn" id="7_2o3ht"]
-[ext_resource type="PackedScene" uid="uid://bo6bobjny1oy3" path="res://Scenes/enemy.tscn" id="8_2bhyb"]
 [ext_resource type="AudioStream" uid="uid://daxhu3l1bnh28" path="res://Assets/Sounds/pick_up_sound.mp3" id="12_cpint"]
 [ext_resource type="Script" path="res://Scripts/Bottom Bound.gd" id="13_kb2cs"]
 
@@ -693,9 +692,6 @@ scale = Vector2(3, 3)
 target_level = ExtResource("7_2o3ht")
 
 [node name="Enemies" type="Node" parent="SceneObjects"]
-
-[node name="enemy" parent="SceneObjects/Enemies" instance=ExtResource("8_2bhyb")]
-position = Vector2(1025, 299)
 
 [node name="Dialog Triggers" type="Node" parent="SceneObjects"]
 

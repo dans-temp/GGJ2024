@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bsowjdx0tto7c"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_wshgk"]
+[ext_resource type="Texture2D" uid="uid://bbnvceuvpmgkk" path="res://Assets/Sprites/flyingfrog-idle.png" id="2_txwq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nef1"]
+atlas = ExtResource("2_txwq4")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb33s"]
+atlas = ExtResource("2_txwq4")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3uwc"]
+atlas = ExtResource("2_txwq4")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8ovx"]
+atlas = ExtResource("2_txwq4")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oot3"]
+atlas = ExtResource("2_txwq4")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q20jh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nef1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb33s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3uwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8ovx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oot3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lnqyk"]
+radius = 31.985
+height = 76.0869
+
+[node name="enemy" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_wshgk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_q20jh")
+autoplay = "default"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 3)
+rotation = 3.17223
+shape = SubResource("CapsuleShape2D_lnqyk")

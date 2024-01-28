@@ -1,9 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://blon18iodsd0c"]
 
 [ext_resource type="Script" path="res://Scripts/Dialog Box.gd" id="1_1532h"]
-[ext_resource type="Texture2D" uid="uid://dkxtsyo65tcbe" path="res://Assets/Portraits/mask.png" id="2_rtw4x"]
 [ext_resource type="Texture2D" uid="uid://jlxjwooba5ij" path="res://Assets/Sprites/dialog-arrow.png" id="3_cgnya"]
 [ext_resource type="AudioStream" uid="uid://bysdokihmjtdq" path="res://Assets/Sounds/speech.wav" id="4_ynku7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oi2ei"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qu3xn"]
 atlas = ExtResource("3_cgnya")
@@ -57,7 +58,7 @@ offset_right = 358.0
 offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.964706, 0.964706, 0.964706, 1)
+color = Color(0.101961, 0.101961, 0.101961, 1)
 script = ExtResource("1_1532h")
 
 [node name="Name" type="RichTextLabel" parent="Dialog Box"]
@@ -66,7 +67,7 @@ offset_left = 7.0
 offset_top = 130.0
 offset_right = 115.0
 offset_bottom = 172.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.858824, 0.858824, 0.858824, 1)
 bbcode_enabled = true
 text = "Name "
 
@@ -77,14 +78,14 @@ offset_left = 129.0
 offset_top = 50.0
 offset_right = 615.0
 offset_bottom = 127.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.858824, 0.858824, 0.858824, 1)
 bbcode_enabled = true
 text = "Words Go Here"
 
 [node name="Portrait" type="Sprite2D" parent="Dialog Box"]
 position = Vector2(57, 67)
 scale = Vector2(3.05264, 2.96875)
-texture = ExtResource("2_rtw4x")
+texture = SubResource("CompressedTexture2D_oi2ei")
 
 [node name="Indicator" type="AnimatedSprite2D" parent="Dialog Box"]
 position = Vector2(634, 180)
@@ -105,4 +106,4 @@ offset_left = -4.0
 offset_top = -5.0
 offset_right = 644.0
 offset_bottom = 182.0
-color = Color(0.945098, 0.45098, 0.466667, 1)
+color = Color(0.803922, 0.580392, 0.113725, 1)

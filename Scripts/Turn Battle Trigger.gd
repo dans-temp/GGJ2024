@@ -14,3 +14,4 @@ func _on_body_entered(body):
 		await $Timer.timeout
 		GlobalVars.disable_movement = false
 		get_tree().change_scene_to_file("res://Scenes/turn_based_battle.tscn")
+		GlobalVars.player_return_position = $"../../CharacterBody2D".position

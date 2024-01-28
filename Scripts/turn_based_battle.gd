@@ -91,6 +91,7 @@ func _on_talk_pressed():
 	
 func end_battle():
 	GlobalVars.turn_battle_complete = true
+	GlobalVars.disable_fire = false
 	music_player2.stop()
 	music_player1.play()
 	Input.set_custom_mouse_cursor(CROSSHAIR, Input.CURSOR_ARROW, Vector2(32,32))

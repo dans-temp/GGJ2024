@@ -13,6 +13,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var isLeft = false
 var flip_scale = Vector2(-1, 1)
 
+func _ready():
+	position = GlobalVars.player_return_position
 
 func _physics_process(delta):
 	if !GlobalVars.disable_movement:
