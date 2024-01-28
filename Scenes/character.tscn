@@ -1,32 +1,34 @@
 [gd_scene load_steps=35 format=3 uid="uid://dfdvl046njpxo"]
 
 [ext_resource type="Script" path="res://Scripts/character.gd" id="1_7mt8a"]
-[ext_resource type="Texture2D" uid="uid://bpp5ynelj6i16" path="res://Assets/Sprites/warmario-idle.png" id="2_6foxm"]
-[ext_resource type="Texture2D" uid="uid://4d0x6odj5mt6" path="res://Assets/Sprites/Jump (32x32).png" id="3_3n2aw"]
+[ext_resource type="Texture2D" uid="uid://b0ojvkgisetbl" path="res://Assets/Sprites/warmario-jump.png" id="2_3b2y1"]
 [ext_resource type="Texture2D" uid="uid://dfdsehq6xkp1n" path="res://Assets/Sprites/warmario-walk.png" id="4_7wys3"]
 [ext_resource type="Script" path="res://Scripts/Marker2D.gd" id="5_arplb"]
 [ext_resource type="Texture2D" uid="uid://dw8dxyfkf5bpu" path="res://Assets/Sprites/rpg.png" id="6_sjfh4"]
 [ext_resource type="Texture2D" uid="uid://bt8um1dgcrqja" path="res://Assets/Sprites/gunshot.png" id="7_jitd4"]
 [ext_resource type="AudioStream" uid="uid://bggcnmq7pbdpx" path="res://Assets/Sounds/rocketlaunch.wav" id="8_5rk2l"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5vgme"]
+load_path = "res://.godot/imported/warmario-idle.png-90b42648acd285c3cfe98d92a9ec5d3b.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_ut6ra"]
-atlas = ExtResource("2_6foxm")
+atlas = SubResource("CompressedTexture2D_5vgme")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xs4x5"]
-atlas = ExtResource("2_6foxm")
+atlas = SubResource("CompressedTexture2D_5vgme")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fajr8"]
-atlas = ExtResource("2_6foxm")
+atlas = SubResource("CompressedTexture2D_5vgme")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7woa0"]
-atlas = ExtResource("2_6foxm")
+atlas = SubResource("CompressedTexture2D_5vgme")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_74uik"]
-atlas = ExtResource("3_3n2aw")
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3e3q"]
+atlas = ExtResource("2_3b2y1")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfuvi"]
@@ -98,7 +100,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_74uik")
+"texture": SubResource("AtlasTexture_a3e3q")
 }],
 "loop": true,
 "name": &"jumping",
@@ -206,7 +208,7 @@ z_index = 1
 texture_filter = 1
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_f6jio")
-animation = &"running"
+animation = &"jumping"
 autoplay = "default"
 
 [node name="Marker2D" type="Marker2D" parent="CharacterContainer/Sprite2D"]

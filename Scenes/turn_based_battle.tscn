@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=3 uid="uid://cbewpi4tdjfwa"]
 
 [ext_resource type="Script" path="res://Scripts/turn_based_battle.gd" id="1_2eu2y"]
-[ext_resource type="Texture2D" uid="uid://5kbr8747ewqe" path="res://Assets/Backgrounds/Blue.png" id="1_lei8n"]
 [ext_resource type="Texture2D" uid="uid://x4uqvemfbo4u" path="res://Assets/Sprites/icon.svg" id="2_bd0b4"]
+[ext_resource type="Texture2D" uid="uid://csw34p1ct1o5n" path="res://Assets/Backgrounds/Forest_Background_0.png" id="2_el6ab"]
 [ext_resource type="Texture2D" uid="uid://dlcdayvx4r7e5" path="res://Assets/Sprites/missle.png" id="4_lteal"]
 [ext_resource type="AudioStream" uid="uid://bggcnmq7pbdpx" path="res://Assets/Sounds/rocketlaunch.wav" id="5_3ypuj"]
 [ext_resource type="AudioStream" uid="uid://cck60a8svitdi" path="res://Assets/Sounds/button-pressed.wav" id="6_kjmaa"]
@@ -157,7 +157,7 @@ script = ExtResource("1_2eu2y")
 layout_mode = 0
 offset_right = 1157.0
 offset_bottom = 649.0
-texture = ExtResource("1_lei8n")
+texture = ExtResource("2_el6ab")
 
 [node name="EnemyContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
